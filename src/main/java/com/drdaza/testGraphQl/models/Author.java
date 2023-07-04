@@ -1,8 +1,8 @@
 package com.drdaza.testGraphQl.models;
 
-public record Author(Integer id, String firstName, String lasName) {
+public record Author(Integer id, String firstName, String lastName) {
 
     public String fullName() {
-        return firstName + " " + lasName;
+        return firstName + " " + lastName;
     }
 }

@@ -14,20 +14,20 @@ public class AuthorRepository {
 
     private List<Author> authors = new ArrayList<>();
     
-    private List<Author> findAll(){
+    public List<Author> findAll(){
         return authors;
     }
 
-    private Author findById(int id) {
+    public Author findById(int id) {
         return authors.stream()
                                .filter(author -> author.id() == id)
                                .findFirst()
                                .orElseThrow(() -> new RuntimeException("Author not found"));
     }
 
-    public Author findByName(String name){
+    public Author findAuthorByName(String fullName){
         return authors.stream()
-                               .filter(author -> author.fullName().equals(name))
+                               .filter(author -> author.fullName().equals(fullName))
                                .findFirst()
                                .orElseThrow(() ->  new  RuntimeException("Author name not found")); 
     }

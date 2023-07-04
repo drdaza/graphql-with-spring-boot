@@ -22,4 +22,6 @@ type Author {
 type Query {
     allBooks: [Book]
     findOne(id:ID!): Book
+    allAuthors: [Author]
+    findAuthorByName(fullName:String): Author
 }
